@@ -1,0 +1,23 @@
+grant codeBase "file:bin/" {
+	permission java.net.SocketPermission "*:1024-", "listen";
+	permission java.net.SocketPermission "*:1024-", "accept";
+	permission java.net.SocketPermission "*:1024-", "resolve";
+	
+	permission java.util.PropertyPermission "user.home", "read";
+
+
+	
+	permission java.io.FilePermission "${user.home}/-", "read";
+	permission java.io.FilePermission "${user.home}/-", "write";
+	permission java.io.FilePermission "${user.home}", "read";
+	permission java.io.FilePermission "${user.home}", "write";
+	permission java.io.FilePermission "${user.home/gitRepoServer}", "read";
+	permission java.io.FilePermission "${user.home/gitRepoServer}", "write";
+	permission java.io.FilePermission "${user.home/gitRepoServer}/-", "write";
+	permission java.io.FilePermission "${user.home/gitRepoServer}/-", "write";
+
+
+	
+	};
+
+
